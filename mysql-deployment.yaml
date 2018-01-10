@@ -18,6 +18,8 @@ metadata:
   name: mysql-pv-claim
   labels:
     app: test-app
+annotations:
+    volume.beta.kubernetes.io/storage-class: ""
 spec:
   accessModes:
     - ReadWriteOnce
