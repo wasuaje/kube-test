@@ -4,6 +4,7 @@ metadata:
   name: pv-volume
   labels:
     type: local
+    app: test-app
 spec:
   storageClassName: manual
   capacity:
