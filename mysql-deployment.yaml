@@ -18,7 +18,7 @@ metadata:
   name: mysql-pv-claim
   labels:
     app: test-app
-annotations:
+  annotations:
     volume.beta.kubernetes.io/storage-class: ""
 spec:
   accessModes:
