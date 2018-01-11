@@ -32,6 +32,8 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: nginx-pv-pod
+  labels:
+    app: test-app
 spec:
   volumes:
     - name: nginx-pv-storage

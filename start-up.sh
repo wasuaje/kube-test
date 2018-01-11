@@ -10,3 +10,5 @@ kubectl create -f pv-volume.yaml
 # kubectl create -f pv-claim.yaml
 kubectl create secret generic mysql-pass --from-literal=password=123456qwe
 kubectl create -f mysql-deployment.yaml
+
+kubectl expose pod nginx-pv-pod --type=LoadBalancer --name=service-test-app
