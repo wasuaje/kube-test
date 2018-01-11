@@ -11,6 +11,7 @@ kubectl create -f pv-volume.yaml
 kubectl create secret generic mysql-pass --from-literal=password=123456qwe
 kubectl create -f mysql-deployment.yaml
 
+#usiog nginx rc at least nginx worked
 kubectl create configmap nginxconfigmap --from-file=http-nginx/default.conf
-
-kubectl expose pod nginx-pv-pod --type=LoadBalancer --name=lb-nginx-test-app
+kubectl expose service nginxsvc --type=LoadBalancer --name=service-test-app
+#kubectl expose pod nginx-pv-pod --type=LoadBalancer --name=lb-nginx-test-app
