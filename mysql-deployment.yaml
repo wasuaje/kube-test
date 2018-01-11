@@ -19,7 +19,7 @@ metadata:
   labels:
     app: test-app
   annotations:
-    volume.beta.kubernetes.io/storage-class: ""
+    volume.beta.kubernetes.io/storage-class: "manual"
 spec:
   accessModes:
     - ReadWriteOnce
