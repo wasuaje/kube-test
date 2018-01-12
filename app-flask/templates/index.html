@@ -37,10 +37,10 @@
         <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Add Message</button>
       </form>
       </div>
-{{ messages }}
+
       <ul>
         {% for message in messages %}
-          <h2>{{message[1]}}</h2> wrote  {{message[2]}}
+          <h3>{{message[1]}}</h3> wrote <h4> {{message[2]}}</h4>
         {% endfor %}
       </ul>
 
