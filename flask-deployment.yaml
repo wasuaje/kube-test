@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: flask-app
   labels:
-    app: guestboo
+    app: testp-app
     tier: backend
 spec:
   # if your cluster supports it, uncomment the following to automatically create
@@ -38,7 +38,7 @@ spec:
   template:
     metadata:
       labels:
-        app: guestbook
+        app: test-app
         tier: backend
     spec:
       containers:
