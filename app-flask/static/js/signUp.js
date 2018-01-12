@@ -1,8 +1,8 @@
-$(function(){
+/*$(function(){
 	$('#btnSignUp').click(function(){
 		
 		$.ajax({
-			url: '/signUp',
+			url: '/',
 			data: $('form').serialize(),
 			type: 'POST',
 			success: function(response){
@@ -12,5 +12,13 @@ $(function(){
 				console.log(error);
 			}
 		});
+	});
+});*/
+
+$(function(){
+	$('#btnSignUp').click(function(){
+		
+		$(".form-signin").submit();
+
 	});
 });
