@@ -22,7 +22,7 @@ def get_data():
 
 @app.route('/', methods=['GET', 'POST'])
 def main():
-    conn.connect()
+    mysql.connect()
     cursor = conn.cursor()
     # read the posted values from the UI
     if request.method == 'POST':
