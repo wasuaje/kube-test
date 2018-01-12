@@ -38,11 +38,15 @@
       </form>
       </div>
 
-      <ul>
-        {% for message in messages %}
-          <h3>{{message[1]}}</h3> wrote <h4> {{message[2]}}</h4>
-        {% endfor %}
-      </ul>
+      <div class="jumbotron">
+       <h1>Messages</h1>
+        <ul>  
+            {% for message in messages %}
+             {{message[1]}} -> {{message[2]}}
+            {% endfor %}
+            <hr>
+        </ul>
+      </div>
 
 
       <footer class="footer">
