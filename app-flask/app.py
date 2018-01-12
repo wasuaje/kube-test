@@ -8,7 +8,7 @@ mysql = MySQL()
 # MySQL configurations
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '123456qwe'
-# app.config['MYSQL_DATABASE_DB'] = 'test-app-mysql'
+app.config['MYSQL_DB'] = 'mydb'
 app.config['MYSQL_HOST'] = 'test-app-mysql'
 mysql.init_app(app)
 
@@ -24,7 +24,7 @@ def get_data():
 def main():
     cursor = mysql.connection.cursor()
     # read the posted values from the UI
-    if flask.request.method == 'POST':
+    if request.method == 'POST':
         _name = request.form['inputName']
         _message = request.form['inputMessage']
         query = "INSERT INTO messages (name, message) VALUES (%s, %s)" % (
