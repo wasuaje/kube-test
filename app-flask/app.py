@@ -1,5 +1,5 @@
 from flask import Flask, render_template, json, request
-from flask_mysql import MySQL
+from flask_mysqldb import MySQL
 
 
 app = Flask(__name__)
