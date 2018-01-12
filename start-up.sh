@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/usr/bin/bash
 #
 # start-up.sh
 #
 # kubelet --network-plugin=cni --network-plugin-dir=/etc/cni/net.d
 # docker build -t wasuaje/app-flask-mysql app-flask/
 # docker push wasuaje/app-flask-mysql 
+# docker run wasuaje/app-flask-mysql 
 # git clone https://github.com/wasuaje/kube-test.git
 mkdir /tmp/data
 kubectl create -f pv-volume.yaml
