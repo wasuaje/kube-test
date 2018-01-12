@@ -14,23 +14,21 @@ mysql.init_app(app)
 
 
 def get_data():
-    conn = mysql.connect()
-    cursor = conn.cursor()
-    query = "SELECT * from messages where id > 0"
-    cursor.execute(query)
-    messages = cursor.fetchall()
-    return messages
+    cur = mysql.connection.cursor()
+    cur.execute('''SELECT * from messages where id > 0''')
+    rv = cur.fetchall()
+    return rv
 
 
 @app.route('/', methods=['GET', 'POST'])
 def main():
-    conn = mysql.connect()
-    cursor = conn.cursor()
+    cursor = mysql.connection.cursor()
     # read the posted values from the UI
     if flask.request.method == 'POST':
         _name = request.form['inputName']
         _message = request.form['inputMessage']
-        query = "INSERT INTO messages (name, message) VALUES (_name, _message)"
+        query = "INSERT INTO messages (name, message) VALUES (%s, %s)" % (
+            _name, _message)
         cursor.execute(query)
     else:
         query = "CREATE TABLE if not exists messages (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name  VARCHAR(40), message VARCHAR(500))"
