@@ -18,7 +18,8 @@ kubectl create -f mysql-deployment.yaml
 kubectl create configmap nginxconfigmap --from-file=http-nginx/default.conf
 # kubectl expose service nginxsvc --type=LoadBalancer --name=service-test-app
 #kubectl expose pod nginx-pv-pod --type=LoadBalancer --name=lb-nginx-test-app
+kubectl create -f flask-deployment.yaml
 # worked exposing backend
-#kubectl expose service flask-app --type=LoadBalancer --port=8080 --target-port=8080 --name=flask-exposed
+kubectl expose service flask-app --type=LoadBalancer --port=8080 --target-port=8080 --name=flask-exposed
 
 

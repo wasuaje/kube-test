@@ -22,21 +22,25 @@ def get_data():
 
 @app.route('/', methods=['GET', 'POST'])
 def main():
-    cursor = mysql.connection.cursor()
+    conn.connect()
+    cursor = conn.cursor()
     # read the posted values from the UI
     if request.method == 'POST':
         _name = request.form['inputName']
         _message = request.form['inputMessage']
-        query = "INSERT INTO messages (name, message) VALUES (%s, %s)" % (
+        query = "INSERT INTO messages (name, message) VALUES ('%s', '%s')" % (
             _name, _message)
         cursor.execute(query)
+        conn.commit()
     else:
         query = "CREATE TABLE if not exists messages (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name  VARCHAR(40), message VARCHAR(500))"
         cursor.execute(query)
+        conn.commit()
         messages = get_data()
         if len(messages) == 0:
             query = "INSERT INTO messages (name, message) VALUES ('Admin',  'Welcome onboard!')"
             cursor.execute(query)
+            conn.commit()
 
     messages = get_data()
     return render_template('index.html', messages=messages)
