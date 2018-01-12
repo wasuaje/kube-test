@@ -15,3 +15,6 @@ kubectl create -f mysql-deployment.yaml
 kubectl create configmap nginxconfigmap --from-file=http-nginx/default.conf
 kubectl expose service nginxsvc --type=LoadBalancer --name=service-test-app
 #kubectl expose pod nginx-pv-pod --type=LoadBalancer --name=lb-nginx-test-app
+
+docker build -t tiao/gb-frontend-flask-redis guestbook-flask/flask-redis
+docker push tiao/gb-frontend-flask-redis
