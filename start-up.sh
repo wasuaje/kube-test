@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 #
+#
 # start-up.sh
 #
 # Commands for image managing
