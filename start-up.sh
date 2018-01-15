@@ -22,7 +22,7 @@ kubectl create -f flask-deployment.yaml
 kubectl create -f nginx-rc.yaml
 
 # worked exposing backend
-kubectl expose service flask-app --type=LoadBalancer --port=8080 --target-port=8080 --name=flask-exposed
-kubectl expose service fnginxsvc --type=LoadBalancer --port=80 --target-port=80 --name=nginx-exposed
+#kubectl expose service flask-app --type=LoadBalancer --port=8080 --target-port=8080 --name=flask-exposed
+kubectl expose service nginxsvc --type=LoadBalancer --port=80 --target-port=8000 --name=nginx-exposed
 
 
