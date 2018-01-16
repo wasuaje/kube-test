@@ -1,12 +1,14 @@
-kube-test
+# kube-test
 =================
 
 This is a personal kubernetes test stack made to put practice some knowledge
 
 
 ** FIRST STEPS **
-      yum install -y git vim dos2unix
-      git clone https://github.com/wasuaje/kube-test.git
+```
+yum install -y git vim dos2unix
+git clone https://github.com/wasuaje/kube-test.git
+```
 
 ** After that just run **
       ./start-up.sh
