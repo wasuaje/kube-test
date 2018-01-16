@@ -1,15 +1,17 @@
 #!/usr/bin/bash
 #
 #
-# start-up.sh
-#
 # Commands for image managing
 # docker build -t wasuaje/app-flask-mysql app-flask/
 # docker push wasuaje/app-flask-mysql 
 # docker run wasuaje/app-flask-mysql 
+# *************************************************************
+# FIRST STEPS
 # yum install -y git vim dos2unix
 # git clone https://github.com/wasuaje/kube-test.git
-
+# *************************************************************
+# After that just run ./start-up.sh
+#
 mkdir /tmp/data
 #kubectl create -f pv-volume.yaml
 # kubectl create -f pv-claim.yaml
