@@ -40,7 +40,7 @@ kubectl create -f mysql-deployment.yaml
 kubectl create configmap nginxconfigmap --from-file=http-nginx/default.conf
 kubectl create -f flask-deployment.yaml
 kubectl create -f nginx-rc.yaml
-cd ..
-cd heapster
-kubectl create -f deploy/kube-config/influxdb/
-kubectl create -f deploy/kube-config/rbac/heapster-rbac.yaml
+#cd ..
+#cd heapster
+#kubectl create -f deploy/kube-config/influxdb/
+#kubectl create -f deploy/kube-config/rbac/heapster-rbac.yaml
