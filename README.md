@@ -4,18 +4,26 @@
 This is a personal kubernetes test stack made to put practice some knowledge
 
 
-**FIRST STEPS**
+**First steps**
+
+Run this in a *Kubernetes* cluster with one or more nodes
+
 ```
 yum install -y git vim dos2unix
 git clone https://github.com/wasuaje/kube-test.git
 ```
 
-**After that just run**
+**Later**
+
+Just run this script to bring everything up (hopefully ;))
+
 ```
 ./start-up.sh
 ```
 
-**Internally it'll run**
+**Check with pointing to a valid exposed cluster URL**
+
+**Script content**
 ```
 mkdir /tmp/data
 kubectl create secret generic mysql-pass --from-literal=password=123456qwe
