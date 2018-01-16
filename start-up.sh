@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 #!/usr/bin/bash
 #
 #
@@ -89,4 +88,3 @@ kubectl create -f nginx-rc.yaml
 #cd heapster
 #kubectl create -f deploy/kube-config/influxdb/
 #kubectl create -f deploy/kube-config/rbac/heapster-rbac.yaml
->>>>>>> Stashed changes
