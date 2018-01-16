@@ -25,14 +25,11 @@
 #kubectl create -f flask-deployment.yaml
 #kubectl create -f nginx-rc.yaml
 
-# worked exposing backend
-#kubectl expose service flask-app --type=LoadBalancer --port=8080 --target-port=8080 --name=flask-exposed
-# kubectl expose service nginxsvc --type=LoadBalancer --port=80 --target-port=8000 --name=nginx-exposed
+# to expose backend
+# kubectl expose service flask-app --type=LoadBalancer --port=8080 --target-port=8080 --name=flask-exposed
 
-#git clone https://github.com/kubernetes/heapster.git
-#vim deploy/kube-config/influxdb/grafana.yaml
-#kubectl create -f deploy/kube-config/influxdb/
-#kubectl create -f deploy/kube-config/rbac/heapster-rbac.yaml
+
+
 
 mkdir /tmp/data
 kubectl create secret generic mysql-pass --from-literal=password=123456qwe
@@ -40,7 +37,7 @@ kubectl create -f mysql-deployment.yaml
 kubectl create configmap nginxconfigmap --from-file=http-nginx/default.conf
 kubectl create -f flask-deployment.yaml
 kubectl create -f nginx-rc.yaml
-#cd ..
-#cd heapster
-#kubectl create -f deploy/kube-config/influxdb/
-#kubectl create -f deploy/kube-config/rbac/heapster-rbac.yaml
+cd ..
+cd heapster
+kubectl create -f deploy/kube-config/influxdb/
+kubectl create -f deploy/kube-config/rbac/heapster-rbac.yaml

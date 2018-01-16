@@ -15,6 +15,7 @@ spec:
   selector:
     app: test-app
     tier: backend
+  clusterIP: None
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
