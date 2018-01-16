@@ -6,8 +6,10 @@ metadata:
     app: test-app
     tier: nginx
 spec:  
+  type: LoadBalancer
   ports:
-  - port: 8000
+  - port: 80
+    targetPort: 3000
     protocol: TCP
     name: http
   - port: 443
